@@ -1,0 +1,22 @@
+.pagination-container {
+    width: 100%;
+    margin: 2rem 0;
+    // padding: 2rem 2rem;
+    text-align: center;
+
+    .btn-pagination {
+        min-width: 2rem;
+        margin: 0 0.2rem;
+        padding: 0.5rem 0.5rem;
+        font-size: 2rem;
+        border-radius: 0.3rem;
+        color: blue;
+        background-color: white;
+
+        &:hover {
+            cursor: pointer;
+            color: white;
+            background-color: blue;
+        }
+    }
+}

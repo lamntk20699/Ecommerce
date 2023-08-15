@@ -1,0 +1,149 @@
+.header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 50;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #131921;
+  height: 60px;
+  padding: 10px;
+}
+
+.logo {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  cursor: pointer;
+}
+
+.logoImg {
+  padding-top: 0.5rem;
+  width: 100px;
+}
+
+.search {
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.searchInput {
+  color: black;
+  font-size: 1.76rem;
+  font-weight: 400;
+  padding-top: 0.8rem;
+  border-top-left-radius: 0.6rem;
+  border-bottom-left-radius: 0.6rem;
+  border-style: none;
+  height: 38px;
+  padding: 5px 10px 5px 10px;
+  outline-color: #fdba74;
+  flex-grow: 1;
+}
+
+.searchIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.4rem;
+  border-top-right-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+  background-color: #fdba74;
+}
+
+.headerNav {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  color: #fff;
+}
+
+.headerUserSubnav {
+  display: block;
+  color: #1f2937;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  width: 11.2rem;
+  cursor: pointer;
+  padding: 2px 0;
+}
+
+.headerUserSubnav:hover {
+  color: #f97316;
+  text-decoration: underline;
+}
+
+.headerNavTextFirst {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  margin: 0 auto;
+}
+
+.headerNavTextSecond {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+.userNav {
+  position: relative;
+  padding: 0.4rem 0;
+}
+
+.userSubNav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  padding: 0.8rem;
+  background-color: #ffffff;
+  transition: all 0.2s ease-in;
+  border-radius: 0.6rem;
+  pointer-events: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  opacity: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  transform: translateY(20px);
+}
+
+.userSubNav::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -1.2rem;
+  height: 1.2rem;
+}
+
+.userNav:hover .userSubNav {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateY(50px);
+}
+
+.quantity {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 600;
+  color: #f97316;
+  font-size: 1.4rem;
+}
+
+.cartText {
+  padding-top: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 600;
+}

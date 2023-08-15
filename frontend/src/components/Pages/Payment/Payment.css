@@ -1,0 +1,82 @@
+.page__body {
+  margin-top: 10rem;
+}
+
+.body__title {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
+
+.body__item {
+  margin: 2rem 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.body__item__title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-right: 2rem;
+  width: 20rem;
+}
+
+.body__item__input {
+  height: 4.2rem;
+  flex: 1;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  border: 1px solid #999;
+  outline: none;
+}
+
+.body__item__text-area {
+  flex: 1;
+  border-radius: 8px;
+  padding: 2rem;
+  border: 1px solid #999;
+  outline: none;
+  font-size: 1.4rem;
+}
+
+.body__item__DVT {
+  font-size: 1.6rem;
+  margin-left: 2rem;
+}
+
+.body__item__select {
+  font-size: 1.6rem;
+  padding: 1rem;
+  outline: none;
+}
+
+.body__item__select > option {
+  padding: 1rem;
+}
+
+.btn_order {
+  border-radius: 6px;
+  margin: auto;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #d3180f; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  transition-duration: 0.1s;
+}
+
+.btn_order:hover {
+  background-color: #af2c15; /* Green */
+  color: white;
+}
+
+.total {
+  margin: 4rem;
+  text-align: end;
+}

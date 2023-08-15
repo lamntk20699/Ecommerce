@@ -1,0 +1,128 @@
+.banner-wrapper {
+    margin: 0;
+    padding: 0;
+    /* height: 80%; */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background: #23E3C9;
+}
+
+.slider {
+    width:800px;
+    height: 500px;
+    border-radius:10px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img{
+    width: 800px;
+    height: 500px;
+}
+
+/* Manual Navigation */
+
+.banner-navigation-manual {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+     background: #40D3DC;
+}
+
+#radio01:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio02:checked~.first {
+    margin-left: -20%;
+}
+
+#radio03:checked~.first {
+    margin-left: -40%;
+}
+
+#radio04:checked~.first {
+    margin-left: -60%;
+}
+
+#radio05:checked~.first {
+    margin-left: -80%;
+}
+
+/* Auto Navigation */
+
+.banner-navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.banner-navigation-auto div {
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1;
+}
+
+.banner-navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio01:checked ~ .banner-navigation-auto .auto-btn01 {
+    background: #40D3DC;
+}
+
+#radio02:checked ~ .banner-navigation-auto .auto-btn02 {
+    background: #40D3DC;
+}
+
+#radio03:checked ~ .banner-navigation-auto .auto-btn03 {
+    background: #40D3DC;
+}
+
+#radio04:checked ~ .banner-navigation-auto .auto-btn04 {
+    background: #40D3DC;
+}
+
+#radio05:checked ~ .banner-navigation-auto .auto-btn05 {
+    background: #40D3DC;
+}
+
+
+
+
+
+

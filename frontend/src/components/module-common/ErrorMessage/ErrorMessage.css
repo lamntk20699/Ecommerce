@@ -1,0 +1,10 @@
+.Alert {
+  background-color: red;
+  text-emphasis-color: white;
+}
+
+.Alert-message {
+  font-size: 30px;
+  text-align: center;
+  background-color: red;
+}

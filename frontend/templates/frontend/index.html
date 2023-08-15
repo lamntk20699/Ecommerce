@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>E-Commerce</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static "css/Header.css" %}"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}"/>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <div id="main">
+      {% comment %}
+      <div class="app-container">
+        {% endcomment %}
+        <div class="header">
+          <div class="logo">
+            <a href="/"
+              ><img
+                class="logoImg"
+                src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+                alt="amazon-logo"
+            /></a>
+          </div>
+          <div class="search">
+            {% comment %} <input type="text" class="searchInput" value="" />
+            <div class="searchIcon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#000"
+              >
+                <path
+                  d="M21.71,20.29,18,16.61A9,9,0,1,0,16.61,18l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,21.71,20.29ZM11,18a7,7,0,1,1,7-7A7,7,0,0,1,11,18Z"
+                ></path>
+              </svg>
+            </div>
+            {% endcomment %}
+          </div>
+
+          <div class="userNav">
+            {% if user.is_authenticated %} {% comment %} Hi {{ user.username }}!
+            <p><a href="{% url 'logout' %}">Log Out</a></p>
+            {% endcomment %}
+            <div class="headerNav">
+              <span class="headerNavTextFirst">Hello,</span>
+              <div>
+                <span class="headerNavTextSecond">{{user.username}}</span>
+              </div>
+            </div>
+
+            <ul class="userSubNav">
+              <a class="headerUserSubnav" href="/profile">Manage Acount</a
+              ><a class="headerUserSubnav" href="/user/order">Your Orders</a
+              ><a
+                class="headerUserSubnav"
+                style="text-align: left"
+                href="{% url 'logout' %}"
+              >
+                Log out
+              </a>
+            </ul>
+            {% else %} {% comment %}
+            <p>You are not logged in</p>
+            <a href="{% url 'login' %}">Log In</a> {% endcomment %}
+            <a class="headerNav" href="/login"
+              ><span class="headerNavTextFirst">Hello,</span>
+              <div><span class="headerNavTextSecond">Sign In</span></div></a
+            >
+            {% endif %}
+          </div>
+          {% comment %}
+          <div class="userNav"></div>
+          {% endcomment %} {% if user.is_authenticated %}
+          <a class="headerNav" href="/cart" style="flex-direction: row"
+            ><div style="position: relative">
+              {% comment %} <span class="quantity">3</span> {% endcomment %}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="#fff"
+              >
+                <path
+                  d="M21.5,15a3,3,0,0,0-1.9-2.78l1.87-7a1,1,0,0,0-.18-.87A1,1,0,0,0,20.5,4H6.8L6.47,2.74A1,1,0,0,0,5.5,2h-2V4H4.73l2.48,9.26a1,1,0,0,0,1,.74H18.5a1,1,0,0,1,0,2H5.5a1,1,0,0,0,0,2H6.68a3,3,0,1,0,5.64,0h2.36a3,3,0,1,0,5.82,1,2.94,2.94,0,0,0-.4-1.47A3,3,0,0,0,21.5,15Zm-3.91-3H9L7.34,6H19.2ZM9.5,20a1,1,0,1,1,1-1A1,1,0,0,1,9.5,20Zm8,0a1,1,0,1,1,1-1A1,1,0,0,1,17.5,20Z"
+                ></path>
+              </svg>
+            </div>
+            <span class="cartText">Cart</span></a
+          >
+          {% endif %}
+        </div>
+        {% comment %}
+      </div>
+      {% endcomment %}
+      <div id="app"></div>
+    </div>
+
+    <script src="{% static "frontend/main.js" %}"/>
+    <script src="" async defer></script>
+  </body>
+</html>
